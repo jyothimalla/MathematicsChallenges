@@ -30,7 +30,7 @@ Python 3.x
 
 Flask (pip install flask)
 
-PostgreSQL (if using a database for storing results)
+PostgreSQL (using a database for storing results)
 
 2️⃣ Clone the Repository
 
@@ -62,17 +62,21 @@ Alternatively, use Heroku or Railway.app.
 
 📸 Screenshots
 
-Home Page
+## 📸 Screenshots
 
-Quiz Interface
+### Home Page
+![Home Page](assets/images/image-4.png)
 
-Leaderboard
+### Quiz Interface
+![Quiz Interface](assets/images/image-2.png)
 
+![Quiz Interface 2](assets/images/image-3.png)
 
+### Results
+![Results](assets/images/image-5.png)
 
-
-
-
+### Leaderboard
+![Leaderboard](assets/images/image-6.png)
 
 📅 Future Improvements
 
