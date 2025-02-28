@@ -1,0 +1,242 @@
+[
+    {
+        "question": "1. Which calculation gives the lowest total?",
+        "options": {
+            "A": "1 + 2 - 3",
+            "B": "3 - 1 + 2",
+            "C": "1 + 3 - 2",
+            "D": "3 - 2 + 1",
+            "E": "3 - 3 - 1"
+        },
+        "answer": "E",
+        "explanation": "The totals are 0, 4, 2, 2 and 0 so the greatest total is 4, answer B."
+    },
+    {
+        "question": "2. How many 2cm cubes are needed to build a tower 16 cm high?",
+        "options": {
+            "A": "2",
+            "B": "5",
+            "C": "8",
+            "D": "12",
+            "E": "18"
+        },
+        "answer": "C",
+        "explanation": "Since each cube is 2cm high, 16 ÷ 2 = 8 cubes are needed."
+    },
+    {
+        "question": "3. Bertha Day invited 12 friends to her birthday party. Party hats are sold in packs of 5. If she gives each friend one hat, how many packs does she need to buy?",
+        "options": {
+            "A": "2",
+            "B": "3",
+            "C": "5",
+            "D": "12",
+            "E": "17"
+        },
+        "answer": "B",
+        "explanation": "12 ÷ 5 = 2.4, but she needs whole packs, so she must buy 3 packs."
+    },
+    {
+        "question": "4. Zap writes down every whole number between 1 and 40. How many times will he write the digit 3?",
+        "options": {
+            "A": "13",
+            "B": "14",
+            "C": "15",
+            "D": "16",
+            "E": "17"
+        },
+        "answer": "B",
+        "explanation": "Counting the occurrences of '3' in numbers from 1 to 40 gives 14."
+    },
+    {
+        "question": "5. A magic shop sells packs of playing cards for £1.20 each. This week there is a special offer: ‘Buy one pack of cards and get a second pack half price.’ Abby Cadabra buys 2 packs. How much do they cost altogether?",
+        "options": {
+            "A": "£1.20",
+            "B": "£1.35",
+            "C": "£1.50",
+            "D": "£1.80",
+            "E": "£2.40"
+        },
+        "answer": "D",
+        "explanation": "One pack costs £1.20, and the second pack is half-price (£0.60). Total cost: £1.80."
+    },
+    {
+        "question": "6. Which of these numbers can be divided exactly by 5, 3, and 2?",
+        "options": {
+            "A": "14",
+            "B": "20",
+            "C": "35",
+            "D": "36",
+            "E": "60"
+        },
+        "answer": "E",
+        "explanation": "60 is the only number divisible by 5, 3, and 2."
+    },
+    {
+        "question": "7. Eight identical squares have been used to make this shape. What fraction of the whole shape is shaded?",
+        "options": {
+            "A": "3/16",
+            "B": "1/2",
+            "C": "5/12",
+            "D": "4/16",
+            "E": "3/10"
+        },
+        "answer": "A",
+        "explanation": "The fraction of shaded area is 3 out of 16 total units."
+    },
+    {
+        "question": "8. What number replaces the question mark to make the calculation correct? 2 × 0 + ? - 2 = 1",
+        "options": {
+            "A": "0",
+            "B": "1",
+            "C": "2",
+            "D": "3",
+            "E": "4"
+        },
+        "answer": "D",
+        "explanation": "Since 2 × 0 = 0, the missing number must be 3 to satisfy the equation."
+    },
+    {
+        "question": "9. A bowl of fruit contains only apples, oranges, pears, and bananas. Half of the fruit are apples. There are 2 oranges, 1 pear, and 6 bananas. How many pieces of fruit are there in the bowl altogether?",
+        "options": {
+            "A": "6",
+            "B": "9",
+            "C": "12",
+            "D": "15",
+            "E": "18"
+        },
+        "answer": "E",
+        "explanation": "If half the total is apples, the other half (oranges, pear, and bananas) is 9. So, total = 18."
+    },
+    {
+        "question": "10. When this multiplication grid is completed, how many answers will be even numbers?",
+        "options": {
+            "A": "9",
+            "B": "15",
+            "C": "16",
+            "D": "20",
+            "E": "25"
+        },
+        "answer": "C",
+        "explanation": "A multiplication grid shows that 16 numbers will be even."
+    },
+    {
+        "question": "11. A four-digit code has to be entered into a keypad to open a safe. The code must be even, use at least one digit from each row, one from each column, and add to an even number. Which code is correct?",
+        "options": {
+            "A": "1368",
+            "B": "1458",
+            "C": "1569",
+            "D": "2378",
+            "E": "2678"
+        },
+        "answer": "A",
+        "explanation": "Only 1368 satisfies all the conditions."
+    },
+    {
+        "question": "12. Twelve cards are numbered 1 to 12. Amir sorts these cards into pairs. Each pair adds to the same total. Which number must be paired with 3?",
+        "options": {
+            "A": "8",
+            "B": "9",
+            "C": "10",
+            "D": "11",
+            "E": "12"
+        },
+        "answer": "C",
+        "explanation": "Pairs adding to the same total (13) include 3 + 10."
+    },
+    {
+        "question": "13. Ellie must be ready for her football match at 8:45 a.m. She needs 15 minutes to get ready, 20 minutes for breakfast, 5 minutes to walk, and 7 minutes to warm up. What time should she wake up?",
+        "options": {
+            "A": "8:02 a.m.",
+            "B": "8:01 a.m.",
+            "C": "8:00 a.m.",
+            "D": "7:59 a.m.",
+            "E": "7:58 a.m."
+        },
+        "answer": "E",
+        "explanation": "Adding up the required time, she needs to wake up at 7:58 a.m."
+    },
+    {
+        "question": "20. Leo is 12 years old, and his cousin Polly is three times his age. How old will Polly be when Leo is twice as old as he is now?",
+        "options": {
+            "A": "24",
+            "B": "36",
+            "C": "48",
+            "D": "60",
+            "E": "72"
+        },
+        "answer": "C",
+        "explanation": "When Leo turns 24, Polly will be 36 + 12 = 48."
+    },
+    {
+        "question": "20. Leo is 12 years old, and his cousin Polly is three times his age. How old will Polly be when Leo is twice as old as he is now?",
+        "options": {
+            "A": "24",
+            "B": "36",
+            "C": "48",
+            "D": "60",
+            "E": "72"
+        },
+        "answer": "C",
+        "explanation": "When Leo turns 24, Polly will be 36 + 12 = 48."
+    },
+    {
+        "question": "20. Leo is 12 years old, and his cousin Polly is three times his age. How old will Polly be when Leo is twice as old as he is now?",
+        "options": {
+            "A": "24",
+            "B": "36",
+            "C": "48",
+            "D": "60",
+            "E": "72"
+        },
+        "answer": "C",
+        "explanation": "When Leo turns 24, Polly will be 36 + 12 = 48."
+    },
+    {
+        "question": "20. Leo is 12 years old, and his cousin Polly is three times his age. How old will Polly be when Leo is twice as old as he is now?",
+        "options": {
+            "A": "24",
+            "B": "36",
+            "C": "48",
+            "D": "60",
+            "E": "72"
+        },
+        "answer": "C",
+        "explanation": "When Leo turns 24, Polly will be 36 + 12 = 48."
+    },
+    {
+        "question": "20. Leo is 12 years old, and his cousin Polly is three times his age. How old will Polly be when Leo is twice as old as he is now?",
+        "options": {
+            "A": "24",
+            "B": "36",
+            "C": "48",
+            "D": "60",
+            "E": "72"
+        },
+        "answer": "C",
+        "explanation": "When Leo turns 24, Polly will be 36 + 12 = 48."
+    },
+    {
+        "question": "20. Leo is 12 years old, and his cousin Polly is three times his age. How old will Polly be when Leo is twice as old as he is now?",
+        "options": {
+            "A": "24",
+            "B": "36",
+            "C": "48",
+            "D": "60",
+            "E": "72"
+        },
+        "answer": "C",
+        "explanation": "When Leo turns 24, Polly will be 36 + 12 = 48."
+    },
+    {
+        "question": "20. Leo is 12 years old, and his cousin Polly is three times his age. How old will Polly be when Leo is twice as old as he is now?",
+        "options": {
+            "A": "24",
+            "B": "36",
+            "C": "48",
+            "D": "60",
+            "E": "72"
+        },
+        "answer": "C",
+        "explanation": "When Leo turns 24, Polly will be 36 + 12 = 48."
+    }
+]

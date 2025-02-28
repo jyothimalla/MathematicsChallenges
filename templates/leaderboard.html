@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Leaderboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            background-color: white;
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Leaderboard</h1>
+        {% if leaderboard %}
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Score</th>
+                    <th>Attempt Date</th>
+                </tr>
+                {% for entry in leaderboard %}
+                <tr>
+                    <td>{{ entry.name }}</td>
+                    <td>{{ entry.score }}</td>
+                    <td>{{ entry.date }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p>No scores yet! Take the quiz to add your name.</p>
+        {% endif %}
+        <br>
+        <a href="{{ url_for('home') }}">Take the Quiz Again</a>
+    </div>
+</body>
+</html>

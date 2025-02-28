@@ -1,0 +1,243 @@
+[
+    {
+      "question": "Which calculation gives the greatest total?",
+      "options": [
+        "1 + 2 - 3",
+        "3 - 1 + 2",
+        "1 + 3 - 2",
+        "3 - 2 + 1",
+        "3 - 2 - 1"
+      ],
+      "answer": "B",
+      "category": "Arithmetic"
+    },
+    {
+      "question": "How many 2cm cubes are needed to build a tower 16 cm high?",
+      "options": [
+        "2",
+        "5",
+        "8",
+        "12",
+        "18"
+      ],
+      "answer": "C",
+      "category": "Measurement"
+    },
+    {
+      "question": "Bertha Day invited 12 friends to her birthday party. Party hats are sold in packs of 5. If she gives each friend one hat, how many packs does she need to buy?",
+      "options": [
+        "2",
+        "3",
+        "5",
+        "12",
+        "17"
+      ],
+      "answer": "B",
+      "category": "Arithmetic"
+    },
+    {
+      "question": "Zap writes down every whole number between 1 and 40. How many times will he write the digit 3?",
+      "options": [
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "answer": "B",
+      "category": "Counting"
+    },
+    {
+      "question": "A magic shop sells packs of playing cards for £1.20 each. This week there is a special offer 'Buy one pack of cards and get a second pack half price.' Abby Cadabra buys 2 packs. How much do they cost altogether?",
+      "options": [
+        "£1.20",
+        "£1.35",
+        "£1.50",
+        "£1.80",
+        "£2.40"
+      ],
+      "answer": "D",
+      "category": "Money"
+    },
+    {
+      "question": "Which of these numbers can be divided exactly by 5, 3 and 2?",
+      "options": [
+        "14",
+        "20",
+        "35",
+        "36",
+        "60"
+      ],
+      "answer": "E",
+      "category": "Number Properties"
+    },
+    {
+      "question": "Eight identical squares have been used to make this shape. What fraction of the whole shape is shaded?",
+      "options": [
+        "3/16",
+        "1/2",
+        "5/12",
+        "4/16",
+        "3/10"
+      ],
+      "answer": "A",
+      "category": "Geometry"
+    },
+    {
+      "question": "What number replaces the question mark to make the calculation correct: 2 = 1 + ? - 2?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": "D",
+      "category": "Arithmetic"
+    },
+    {
+      "question": "A bowl of fruit contains only apples, oranges, pears and bananas. Half of the fruit are apples. There are 2 oranges, 1 pear and 6 bananas. How many pieces of fruit are there in the bowl altogether?",
+      "options": [
+        "6",
+        "9",
+        "12",
+        "15",
+        "18"
+      ],
+      "answer": "E",
+      "category": "Logic"
+    },
+    {
+      "question": "When this multiplication grid has been completed, how many answers will be an even number?",
+      "options": [
+        "9",
+        "15",
+        "16",
+        "20",
+        "25"
+      ],
+      "answer": "C",
+      "category": "Arithmetic"
+    },
+    {
+      "question": "A four digit code has to be entered into this keypad to open the door to a safe. There are four rules: (1) The code must be an even number; (2) There must be at least one digit from each row; (3) There must be at least one digit from each column; (4) When you add the digits together it makes an even number. Which code is correct?",
+      "options": [
+        "1368",
+        "1458",
+        "1569",
+        "2378",
+        "2678"
+      ],
+      "answer": "A",
+      "category": "Logic"
+    },
+    {
+      "question": "Twelve cards are numbered 1 to 12. Amir sorts these cards into pairs. Each pair adds to the same total. Which number must be paired with 3?",
+      "options": [
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "answer": "C",
+      "category": "Number Patterns"
+    },
+    {
+      "question": "Ellie must be ready for her football match which kicks off at 8.45 a.m. It takes Ellie 15 minutes to get up and change into her football kit. Breakfast takes 20 minutes. The football pitch is a five minute walk from her home. The team has to warm up for seven minutes before the kick off. To be on time for kick off, which of these times must Ellie wake up?",
+      "options": [
+        "8.02 a.m.",
+        "8.01 a.m.",
+        "8.00 a.m.",
+        "7.59 a.m.",
+        "7.58 a.m."
+      ],
+      "answer": "E",
+      "category": "Time Management"
+    },
+    {
+      "question": "The value of each shape is a positive, single digit. What is the value of the triangle?",
+      "options": [
+        "4",
+        "6",
+        "8",
+        "9",
+        "10"
+      ],
+      "answer": "B",
+      "category": "Logic"
+    },
+    {
+      "question": "Rebecca Violet loves drinking grape juice. When her glass is full, the total mass is 450g. After drinking half of it, the total mass is 360g. What is the mass of just her glass?",
+      "options": [
+        "120g",
+        "150g",
+        "180g",
+        "250g",
+        "270g"
+      ],
+      "answer": "E",
+      "category": "Arithmetic"
+    },
+    {
+      "question": "Which calculation has an odd number as an answer?",
+      "options": [
+        "177 + 99",
+        "300 + 106",
+        "6 ÷ 3",
+        "103 x 9",
+        "1033 - 85"
+      ],
+      "answer": "D",
+      "category": "Arithmetic"
+    },
+    {
+      "question": "A shop sells toy monsters in three colours, blue, pink and yellow. The blue and the pink monster together cost £5. The pink and the yellow monster together cost £8. The yellow and the blue monster together cost £9. How much does it cost to buy one monster of each colour?",
+      "options": [
+        "£11",
+        "£13",
+        "£14",
+        "£17",
+        "£22"
+      ],
+      "answer": "A",
+      "category": "Algebra"
+    },
+    {
+      "question": "The length of this rectangle is double its width. The perimeter of the rectangle is 48cm. What is the length of the rectangle?",
+      "options": [
+        "6cm",
+        "8cm",
+        "12cm",
+        "16cm",
+        "24cm"
+      ],
+      "answer": "D",
+      "category": "Geometry"
+    },
+    {
+      "question": "Five friends, Aye, Bea, Cee, Dea and Eeh have a race.\nAye finishes in front of Cee.\nDea finishes two places in front of Aye.\nBea finishes just behind Cee.\nIn which place did Aye finish?",
+      "options": [
+        "1st place",
+        "2nd place",
+        "3rd place",
+        "4th place",
+        "5th place"
+      ],
+      "answer": "C",
+      "category": "Logic"
+    },
+    {
+      "question": "Leo is 12 years old, and his cousin Polly is three times his age. How old will Polly be when Leo is twice as old as he is now?",
+      "options": [
+        "24",
+        "36",
+        "48",
+        "60",
+        "72"
+      ],
+      "answer": "C",
+      "category": "Algebra"
+    }
+  ]
+  

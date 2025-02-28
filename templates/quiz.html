@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background-color: white;
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            text-align: left;
+            margin-top: 15px;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Question {{ question_num }} of {{ total_questions }}</h1>
+        <p>{{ question['question'] }}</p>
+        <form method="POST">
+            {% for key, value in question["options"].items() %}
+                <input type="radio" name="answer" value="{{ key }}"
+                       {% if key == previous_answer %} checked {% endif %} required> 
+                {{ key }}. {{ value }}<br>
+            {% endfor %}
+        
+            <br>
+            {% if question_num > 1 %}
+                <button type="submit" name="action" value="previous">Previous</button>
+            {% endif %}
+        
+            {% if question_num < 20 %}
+                <button type="submit" name="action" value="next">Next</button>
+            {% else %}
+                <button type="submit" name="action" value="submit">Submit</button>
+            {% endif %}
+        </form>
+        
+    </div>
+</body>
+</html>
