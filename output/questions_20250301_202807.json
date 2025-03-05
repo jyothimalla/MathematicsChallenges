@@ -1,0 +1,782 @@
+[
+    {
+        "id": 1,
+        "question": "Name .................................................................... Class .................."
+    },
+    {
+        "id": 2,
+        "question": "For each question, write down A  B  C  D or E in the box next to each answer."
+    },
+    {
+        "id": 3,
+        "question": "Practice 1"
+    },
+    {
+        "id": 5,
+        "question": "What is 2 + 3?"
+    },
+    {
+        "id": 7,
+        "question": "A   2"
+    },
+    {
+        "id": 8,
+        "question": "B   3"
+    },
+    {
+        "id": 9,
+        "question": "C   4"
+    },
+    {
+        "id": 10,
+        "question": "D   5"
+    },
+    {
+        "id": 11,
+        "question": "E   6"
+    },
+    {
+        "id": 12,
+        "question": "Practice 2"
+    },
+    {
+        "id": 14,
+        "question": "What number is hidden by the      in the calculation?"
+    },
+    {
+        "id": 16,
+        "question": "15 -     = 9"
+    },
+    {
+        "id": 18,
+        "question": "A   24"
+    },
+    {
+        "id": 19,
+        "question": "B   8"
+    },
+    {
+        "id": 20,
+        "question": "C   7"
+    },
+    {
+        "id": 21,
+        "question": "D   6"
+    },
+    {
+        "id": 22,
+        "question": "E   5"
+    },
+    {
+        "id": 23,
+        "question": "Practice 3"
+    },
+    {
+        "id": 25,
+        "question": "What fraction of the square is shaded?"
+    },
+    {
+        "id": 28,
+        "question": "A   1"
+    },
+    {
+        "id": 29,
+        "question": "2"
+    },
+    {
+        "id": 30,
+        "question": "B   1"
+    },
+    {
+        "id": 31,
+        "question": "3"
+    },
+    {
+        "id": 32,
+        "question": "C   1"
+    },
+    {
+        "id": 33,
+        "question": "4"
+    },
+    {
+        "id": 34,
+        "question": "D   1"
+    },
+    {
+        "id": 35,
+        "question": "5"
+    },
+    {
+        "id": 36,
+        "question": "E   1"
+    },
+    {
+        "id": 37,
+        "question": "6"
+    },
+    {
+        "id": 38,
+        "question": "First Mathematics Challenge"
+    },
+    {
+        "id": 39,
+        "question": "©The Mathematical Association"
+    },
+    {
+        "id": 40,
+        "question": "259 London Road"
+    },
+    {
+        "id": 41,
+        "question": "Leicester"
+    },
+    {
+        "id": 42,
+        "question": "LE2 3BE"
+    },
+    {
+        "id": 43,
+        "question": "www.primarymathschallenge.org.uk/fmc"
+    },
+    {
+        "id": 44,
+        "question": "Total Marks"
+    },
+    {
+        "id": 45,
+        "question": "/20"
+    },
+    {
+        "id": 46,
+        "question": "D"
+    },
+    {
+        "id": 48,
+        "question": "1.   Which shape appears in all the diagrams?"
+    },
+    {
+        "id": 50,
+        "question": "A   triangle          B   square          C   pentagon          D   hexagon          E   star"
+    },
+    {
+        "id": 51,
+        "question": "2.   How many even numbers are there between 27 and 43?"
+    },
+    {
+        "id": 53,
+        "question": "A    5"
+    },
+    {
+        "id": 54,
+        "question": "B   6"
+    },
+    {
+        "id": 55,
+        "question": "C   7"
+    },
+    {
+        "id": 56,
+        "question": "D   8"
+    },
+    {
+        "id": 57,
+        "question": "E   15"
+    },
+    {
+        "id": 58,
+        "question": "3.\t What is the smallest number that has a remainder of 1 when divided by 2, 3 or 4?"
+    },
+    {
+        "id": 61,
+        "question": "A   5"
+    },
+    {
+        "id": 62,
+        "question": "B   7"
+    },
+    {
+        "id": 63,
+        "question": "C   11"
+    },
+    {
+        "id": 64,
+        "question": "D   13"
+    },
+    {
+        "id": 65,
+        "question": "E   25"
+    },
+    {
+        "id": 66,
+        "question": "First Mathematics Challenge"
+    },
+    {
+        "id": 68,
+        "question": "4. \t A manager of a football team, Milo Mastery, needs to choose a new kit."
+    },
+    {
+        "id": 70,
+        "question": "There are 3 colours of shirt.  Purple, red and yellow."
+    },
+    {
+        "id": 72,
+        "question": "There are 2 colours for shorts.  Blue and black."
+    },
+    {
+        "id": 74,
+        "question": "How many different combinations of shirts and shorts can he make?"
+    },
+    {
+        "id": 76,
+        "question": "A   2"
+    },
+    {
+        "id": 77,
+        "question": "B   3"
+    },
+    {
+        "id": 78,
+        "question": "C   4"
+    },
+    {
+        "id": 79,
+        "question": "D   5"
+    },
+    {
+        "id": 80,
+        "question": "E   6"
+    },
+    {
+        "id": 82,
+        "question": "5.\t A pizza is divided into equal slices."
+    },
+    {
+        "id": 84,
+        "question": "How many slices have been taken?"
+    },
+    {
+        "id": 86,
+        "question": "A   4"
+    },
+    {
+        "id": 87,
+        "question": "B   3"
+    },
+    {
+        "id": 88,
+        "question": "C   5"
+    },
+    {
+        "id": 89,
+        "question": "D   6"
+    },
+    {
+        "id": 90,
+        "question": "E   7"
+    },
+    {
+        "id": 91,
+        "question": "6.   What should replace the question mark to make the calculation correct?"
+    },
+    {
+        "id": 94,
+        "question": "A   x1"
+    },
+    {
+        "id": 95,
+        "question": "B   -1"
+    },
+    {
+        "id": 96,
+        "question": "C   -2"
+    },
+    {
+        "id": 97,
+        "question": "D   -3"
+    },
+    {
+        "id": 98,
+        "question": "E   -5"
+    },
+    {
+        "id": 99,
+        "question": "4"
+    },
+    {
+        "id": 100,
+        "question": "8"
+    },
+    {
+        "id": 101,
+        "question": "5"
+    },
+    {
+        "id": 102,
+        "question": "x2"
+    },
+    {
+        "id": 103,
+        "question": "?"
+    },
+    {
+        "id": 104,
+        "question": "+2"
+    },
+    {
+        "id": 105,
+        "question": "First Mathematics Challenge"
+    },
+    {
+        "id": 107,
+        "question": "7.\t A two-digit number is less than 50."
+    },
+    {
+        "id": 109,
+        "question": "The sum of the digits is 12 and the difference between them is 4."
+    },
+    {
+        "id": 111,
+        "question": "What is the number?"
+    },
+    {
+        "id": 113,
+        "question": "A   15"
+    },
+    {
+        "id": 114,
+        "question": "B   26"
+    },
+    {
+        "id": 115,
+        "question": "C   39"
+    },
+    {
+        "id": 116,
+        "question": "D   48"
+    },
+    {
+        "id": 117,
+        "question": "E   84"
+    },
+    {
+        "id": 118,
+        "question": "8.\t \t How many triangles are in the diagram?"
+    },
+    {
+        "id": 121,
+        "question": "A   5"
+    },
+    {
+        "id": 122,
+        "question": "B   7"
+    },
+    {
+        "id": 123,
+        "question": "C   11"
+    },
+    {
+        "id": 124,
+        "question": "D   13"
+    },
+    {
+        "id": 125,
+        "question": "E   25"
+    },
+    {
+        "id": 126,
+        "question": "9.\t Farhat, Jess and Tom have 18 apples between them."
+    },
+    {
+        "id": 128,
+        "question": "Farhat has half the number of apples that Tom has."
+    },
+    {
+        "id": 130,
+        "question": "Jess has three times the number of apples that Tom has."
+    },
+    {
+        "id": 132,
+        "question": "How many apples does Tom have?"
+    },
+    {
+        "id": 134,
+        "question": "A   2"
+    },
+    {
+        "id": 135,
+        "question": "B   3"
+    },
+    {
+        "id": 136,
+        "question": "C   4"
+    },
+    {
+        "id": 137,
+        "question": "D   5"
+    },
+    {
+        "id": 138,
+        "question": "E   6"
+    },
+    {
+        "id": 139,
+        "question": "First Mathematics Challenge"
+    },
+    {
+        "id": 141,
+        "question": "10.\t\t DanDan Double likes to multiply whole numbers by two."
+    },
+    {
+        "id": 143,
+        "question": "He realised that his answers are:"
+    },
+    {
+        "id": 145,
+        "question": "A   always odd          B   always even          C   sometimes odd"
+    },
+    {
+        "id": 147,
+        "question": "D   sometimes even          E   always less than 100"
+    },
+    {
+        "id": 148,
+        "question": "11. \t Pencils can be bought in packs of 8."
+    },
+    {
+        "id": 150,
+        "question": "There are 28 pupils in class."
+    },
+    {
+        "id": 152,
+        "question": "How many packs must the teacher buy to be sure that"
+    },
+    {
+        "id": 154,
+        "question": "everyone gets a pencil of their own?"
+    },
+    {
+        "id": 157,
+        "question": "A   2"
+    },
+    {
+        "id": 158,
+        "question": "B   3"
+    },
+    {
+        "id": 159,
+        "question": "C   4"
+    },
+    {
+        "id": 160,
+        "question": "D   5"
+    },
+    {
+        "id": 161,
+        "question": "E   6"
+    },
+    {
+        "id": 162,
+        "question": "12.   In the calculations below, which number is hidden by the       ?"
+    },
+    {
+        "id": 164,
+        "question": "3 +     = 8"
+    },
+    {
+        "id": 166,
+        "question": "+     = 14"
+    },
+    {
+        "id": 168,
+        "question": "A   6"
+    },
+    {
+        "id": 169,
+        "question": "B   7"
+    },
+    {
+        "id": 170,
+        "question": "C   8"
+    },
+    {
+        "id": 171,
+        "question": "D   9"
+    },
+    {
+        "id": 172,
+        "question": "E   10"
+    },
+    {
+        "id": 173,
+        "question": "First Mathematics Challenge"
+    },
+    {
+        "id": 175,
+        "question": "13.\t\t Tan is knitting a scarf in a week."
+    },
+    {
+        "id": 177,
+        "question": "At the end of Monday his scarf measures 68cm."
+    },
+    {
+        "id": 179,
+        "question": "He knits another 5cm every day."
+    },
+    {
+        "id": 181,
+        "question": "How long is it at the end of Friday?"
+    },
+    {
+        "id": 184,
+        "question": "A   72cm"
+    },
+    {
+        "id": 185,
+        "question": "B   73cm"
+    },
+    {
+        "id": 186,
+        "question": "C   78cm"
+    },
+    {
+        "id": 187,
+        "question": "D   83cm"
+    },
+    {
+        "id": 188,
+        "question": "E   88cm"
+    },
+    {
+        "id": 189,
+        "question": "14.\t\t Maya Makealot can build this set of 3 stairs with 12 blocks."
+    },
+    {
+        "id": 191,
+        "question": "How many blocks will she need to build a set of 6 stairs?"
+    },
+    {
+        "id": 193,
+        "question": "A   42"
+    },
+    {
+        "id": 194,
+        "question": "B   30"
+    },
+    {
+        "id": 195,
+        "question": "C   36"
+    },
+    {
+        "id": 196,
+        "question": "D   21"
+    },
+    {
+        "id": 197,
+        "question": "E   52"
+    },
+    {
+        "id": 198,
+        "question": "15.  \t Amanda has 10 coins in her purse."
+    },
+    {
+        "id": 200,
+        "question": "They are 2p and 5p coins."
+    },
+    {
+        "id": 202,
+        "question": "The coins make 32p in total."
+    },
+    {
+        "id": 204,
+        "question": "How many 5p coins are there in Amanda’s purse?"
+    },
+    {
+        "id": 206,
+        "question": "A   3"
+    },
+    {
+        "id": 207,
+        "question": "B   4"
+    },
+    {
+        "id": 208,
+        "question": "C   5"
+    },
+    {
+        "id": 209,
+        "question": "D   6"
+    },
+    {
+        "id": 210,
+        "question": "E    7"
+    },
+    {
+        "id": 211,
+        "question": "First Mathematics Challenge"
+    },
+    {
+        "id": 213,
+        "question": "16.\t\t Bethany’s water bottle holds 150ml when it is three quarters full."
+    },
+    {
+        "id": 215,
+        "question": "How much does it hold when it is one quarter full?"
+    },
+    {
+        "id": 217,
+        "question": "A   15 ml"
+    },
+    {
+        "id": 218,
+        "question": "B   50ml"
+    },
+    {
+        "id": 219,
+        "question": "C   200ml"
+    },
+    {
+        "id": 220,
+        "question": "D   450ml"
+    },
+    {
+        "id": 221,
+        "question": "E   600ml"
+    },
+    {
+        "id": 222,
+        "question": "17.\t\t The clock in the school staffroom is always 5 minutes slow."
+    },
+    {
+        "id": 224,
+        "question": "However, Mr. Punctual’s watch is always 8 minutes fast."
+    },
+    {
+        "id": 226,
+        "question": "The staffroom clock is showing 11.30am."
+    },
+    {
+        "id": 228,
+        "question": "What time is shown on Mr. Punctual’s watch?"
+    },
+    {
+        "id": 231,
+        "question": "A   11.17am        B   11.27am        C   11.33am        D   11.35am        E   11.43am"
+    },
+    {
+        "id": 232,
+        "question": "18.\t\t There are 9 cones along a fun run course."
+    },
+    {
+        "id": 234,
+        "question": "The first one marks the start of the race and the last one is at the finish line."
+    },
+    {
+        "id": 236,
+        "question": "The distance between each cone is 7 metres."
+    },
+    {
+        "id": 238,
+        "question": "How long is the fun run?"
+    },
+    {
+        "id": 240,
+        "question": "A   56 metres       B   72 metres        C   54 metres       D   49 metres       E   63 metres"
+    },
+    {
+        "id": 241,
+        "question": "First Mathematics Challenge"
+    },
+    {
+        "id": 243,
+        "question": "19. \t On the planet Numeros, the natives have a special sort of mathematics using the symbol"
+    },
+    {
+        "id": 245,
+        "question": "2     3 means add 2 and 3 and then add on the product of 2 and 3"
+    },
+    {
+        "id": 247,
+        "question": "In this example 2     3 would equal 11."
+    },
+    {
+        "id": 249,
+        "question": "What is 5     6?"
+    },
+    {
+        "id": 252,
+        "question": "A   11"
+    },
+    {
+        "id": 253,
+        "question": "B    19"
+    },
+    {
+        "id": 254,
+        "question": "C   30"
+    },
+    {
+        "id": 255,
+        "question": "D   41"
+    },
+    {
+        "id": 256,
+        "question": "E   330"
+    },
+    {
+        "id": 257,
+        "question": "20.\t\t In the diagram, a square is divided into 9 equal squares."
+    },
+    {
+        "id": 259,
+        "question": "What fraction of the big square is shaded?"
+    },
+    {
+        "id": 261,
+        "question": "A   1"
+    },
+    {
+        "id": 262,
+        "question": "6"
+    },
+    {
+        "id": 263,
+        "question": "B   1"
+    },
+    {
+        "id": 264,
+        "question": "4"
+    },
+    {
+        "id": 265,
+        "question": "C  1"
+    },
+    {
+        "id": 266,
+        "question": "3"
+    },
+    {
+        "id": 267,
+        "question": "D   1"
+    },
+    {
+        "id": 268,
+        "question": "2"
+    },
+    {
+        "id": 269,
+        "question": "E    2"
+    },
+    {
+        "id": 270,
+        "question": "9"
+    },
+    {
+        "id": 271,
+        "question": "© First Mathematics Challenge 2020"
+    },
+    {
+        "id": 272,
+        "question": "First Mathematics Challenge"
+    }
+]

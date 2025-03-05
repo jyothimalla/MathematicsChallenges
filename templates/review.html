@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Quiz Review</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background-color: white;
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #28a745;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+        .question {
+            text-align: left;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Review</h1>
+        {% for q in questions %}
+            <div class="question">
+                <p><strong>Q{{ loop.index }}:</strong> {{ q.question }}</p>
+                {% if q.image %}
+                    <img src="{{ q.image }}" alt="Question Image">
+                {% endif %}
+                <ul>
+                    {% for key, value in q.options.items() %}
+                        <li class="{% if key == q.answer %} correct {% elif key == q.selected_answer %} incorrect {% endif %}">
+                            {{ key }}. {{ value }}
+                        </li>
+                    {% endfor %}
+                </ul>
+                <p><strong>Explanation:</strong> {{ q.explanation or "No explanation available." }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

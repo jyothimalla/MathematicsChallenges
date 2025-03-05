@@ -1,0 +1,207 @@
+[
+    {
+        "question": "1.   Which shape appears in all the diagrams?",
+        "options": [
+            "A   triangle          B   square          C   pentagon          D   hexagon          E   star"
+        ],
+        "answer": null
+    },
+    {
+        "question": "2.   How many even numbers are there between 27 and 43?",
+        "options": [
+            "A    5",
+            "B   6",
+            "C   7",
+            "D   8",
+            "E   15"
+        ],
+        "answer": null
+    },
+    {
+        "question": "3.\t What is the smallest number that has a remainder of 1 when divided by 2, 3 or 4?",
+        "options": [
+            "A   5",
+            "B   7",
+            "C   11",
+            "D   13",
+            "E   25"
+        ],
+        "answer": null
+    },
+    {
+        "question": "4. \t A manager of a football team, Milo Mastery, needs to choose a new kit.",
+        "options": [
+            "A   2",
+            "B   3",
+            "C   4",
+            "D   5",
+            "E   6"
+        ],
+        "answer": null
+    },
+    {
+        "question": "5.\t A pizza is divided into equal slices.",
+        "options": [
+            "A   4",
+            "B   3",
+            "C   5",
+            "D   6",
+            "E   7"
+        ],
+        "answer": null
+    },
+    {
+        "question": "6.   What should replace the question mark to make the calculation correct?",
+        "options": [
+            "A   x1",
+            "B   -1",
+            "C   -2",
+            "D   -3",
+            "E   -5"
+        ],
+        "answer": null
+    },
+    {
+        "question": "7.\t A two-digit number is less than 50.",
+        "options": [
+            "A   15",
+            "B   26",
+            "C   39",
+            "D   48",
+            "E   84"
+        ],
+        "answer": null
+    },
+    {
+        "question": "8.\t \t How many triangles are in the diagram?",
+        "options": [
+            "A   5",
+            "B   7",
+            "C   11",
+            "D   13",
+            "E   25"
+        ],
+        "answer": null
+    },
+    {
+        "question": "9.\t Farhat, Jess and Tom have 18 apples between them.",
+        "options": [
+            "A   2",
+            "B   3",
+            "C   4",
+            "D   5",
+            "E   6"
+        ],
+        "answer": null
+    },
+    {
+        "question": "10.\t\t DanDan Double likes to multiply whole numbers by two.",
+        "options": [
+            "A   always odd          B   always even          C   sometimes odd",
+            "D   sometimes even          E   always less than 100"
+        ],
+        "answer": null
+    },
+    {
+        "question": "11. \t Pencils can be bought in packs of 8.",
+        "options": [
+            "A   2",
+            "B   3",
+            "C   4",
+            "D   5",
+            "E   6"
+        ],
+        "answer": null
+    },
+    {
+        "question": "12.   In the calculations below, which number is hidden by the       ?",
+        "options": [
+            "A   6",
+            "B   7",
+            "C   8",
+            "D   9",
+            "E   10"
+        ],
+        "answer": null
+    },
+    {
+        "question": "13.\t\t Tan is knitting a scarf in a week.",
+        "options": [
+            "A   72cm",
+            "B   73cm",
+            "C   78cm",
+            "D   83cm",
+            "E   88cm"
+        ],
+        "answer": null
+    },
+    {
+        "question": "14.\t\t Maya Makealot can build this set of 3 stairs with 12 blocks.",
+        "options": [
+            "A   42",
+            "B   30",
+            "C   36",
+            "D   21",
+            "E   52"
+        ],
+        "answer": null
+    },
+    {
+        "question": "15.  \t Amanda has 10 coins in her purse.",
+        "options": [
+            "A   3",
+            "B   4",
+            "C   5",
+            "D   6",
+            "E    7"
+        ],
+        "answer": null
+    },
+    {
+        "question": "16.\t\t Bethany’s water bottle holds 150ml when it is three quarters full.",
+        "options": [
+            "A   15 ml",
+            "B   50ml",
+            "C   200ml",
+            "D   450ml",
+            "E   600ml"
+        ],
+        "answer": null
+    },
+    {
+        "question": "17.\t\t The clock in the school staffroom is always 5 minutes slow.",
+        "options": [
+            "A   11.17am        B   11.27am        C   11.33am        D   11.35am        E   11.43am"
+        ],
+        "answer": null
+    },
+    {
+        "question": "18.\t\t There are 9 cones along a fun run course.",
+        "options": [
+            "A   56 metres       B   72 metres        C   54 metres       D   49 metres       E   63 metres"
+        ],
+        "answer": null
+    },
+    {
+        "question": "19. \t On the planet Numeros, the natives have a special sort of mathematics using the symbol",
+        "options": [
+            "A   11",
+            "B    19",
+            "C   30",
+            "D   41",
+            "E   330"
+        ],
+        "answer": null
+    },
+    {
+        "question": "20.\t\t In the diagram, a square is divided into 9 equal squares.",
+        "options": [
+            "A   1",
+            "B   1",
+            "C  1",
+            "D   1",
+            "E    2"
+        ],
+        "answer": null
+    }
+]

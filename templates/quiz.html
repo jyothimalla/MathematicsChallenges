@@ -27,6 +27,11 @@
         input[type="radio"] {
             margin-right: 10px;
         }
+        .question-image img {
+            max-width: 80%;
+            height: auto;
+            margin-top: 10px;
+        }
         button {
             background-color: #007bff;
             color: white;
@@ -46,25 +51,31 @@
     <div class="container">
         <h1>Question {{ question_num }} of {{ total_questions }}</h1>
         <p>{{ question['question'] }}</p>
+
+        {% if question.image %}
+            <div class="question-image">
+                <img src="{{ question.image }}" alt="Question Image">
+            </div>
+        {% endif %}
+
         <form method="POST">
             {% for key, value in question["options"].items() %}
                 <input type="radio" name="answer" value="{{ key }}"
                        {% if key == previous_answer %} checked {% endif %} required> 
                 {{ key }}. {{ value }}<br>
             {% endfor %}
-        
+            
             <br>
             {% if question_num > 1 %}
                 <button type="submit" name="action" value="previous">Previous</button>
             {% endif %}
         
-            {% if question_num < 20 %}
+            {% if question_num < total_questions %}
                 <button type="submit" name="action" value="next">Next</button>
             {% else %}
                 <button type="submit" name="action" value="submit">Submit</button>
             {% endif %}
         </form>
-        
     </div>
 </body>
 </html>
