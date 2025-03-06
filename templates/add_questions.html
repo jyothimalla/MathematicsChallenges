@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add Question</title>
+</head>
+<body>
+    <h2>Add a New Question</h2>
+    <form method="POST">
+        <label>Question:</label>
+        <input type="text" name="question_text" required><br>
+
+        <label>Option A:</label>
+        <input type="text" name="option_a" required><br>
+
+        <label>Option B:</label>
+        <input type="text" name="option_b" required><br>
+
+        <label>Option C:</label>
+        <input type="text" name="option_c" required><br>
+
+        <label>Option D:</label>
+        <input type="text" name="option_d" required><br>
+
+        <label>Option E:</label>
+        <input type="text" name="option_e"><br>
+
+        <label>Correct Answer:</label>
+        <select name="correct_answer" required>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+        </select><br>
+
+        <label>Image URL (optional):</label>
+        <input type="text" name="image_url"><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <hr>
+    <h2>Upload Questions JSON</h2>
+    <form action="{{ url_for('questions.upload_questions') }}" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>

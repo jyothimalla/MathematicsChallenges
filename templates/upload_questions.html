@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Question Papers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            background-color: white;
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #333;
+        }
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .question-papers {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .question-paper {
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+        .question-paper:hover {
+            background-color: #d6d8db;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload a Question Paper</h1>
+        <form action="{{ url_for('upload_questions') }}" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <button type="submit" class="btn">Upload</button>
+        </form>
+
+        <h2>Available Question Papers</h2>
+        <div class="question-papers">
+            {% for paper in question_papers %}
+                <div class="question-paper" onclick="viewQuestions('{{ paper }}')">
+                    Question Paper ID: {{ paper }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script>
+        function viewQuestions(paperId) {
+            window.location.href = "/view_questions/" + paperId;
+        }
+    </script>
+</body>
+</html>
