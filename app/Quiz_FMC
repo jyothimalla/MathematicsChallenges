@@ -1,0 +1,107 @@
+from flask import Flask, render_template, request, redirect, url_for, session, jsonify
+import json
+import os
+from datetime import datetime
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
+from werkzeug.utils import secure_filename
+from uuid import uuid4  # Unique session IDs
+from models import db, QuizSession, QuizResponse
+from questions import questions_bp
+from app.quiz import quiz_bp
+from app.review import review_bp
+from app.result import result_bp
+from app import create_app  # Import from app/__init__.py
+
+# Flask app setup
+app = Flask(__name__)
+app.secret_key = "super_secure_random_key"
+
+app = create_app()
+
+# Database Configuration
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:password@localhost/maths_challenge'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['UPLOAD_FOLDER'] = "uploads"
+
+db.init_app(app)
+migrate = Migrate(app, db)
+
+# Ensure upload folder exists
+os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+
+# Load questions from JSON
+with open("quiz_questions_original.json", "r", encoding="utf-8") as f:
+    ALL_QUESTIONS = json.load(f)
+
+# Import and register Blueprints
+
+
+app.register_blueprint(quiz_bp)
+app.register_blueprint(review_bp)
+app.register_blueprint(result_bp)
+
+# ----------------------- #
+#  HOME PAGE             #
+# ----------------------- #
+@app.route("/", methods=["GET", "POST"])
+def home():
+    if request.method == "POST":
+        name = request.form.get("name")
+        if not name:
+            return "Error: Name is required!"
+
+        session_id = str(uuid4())  # Generate session ID
+        session["name"] = name
+        session["session_id"] = session_id
+        session["score"] = 0
+        session["current_q"] = 0
+        session["answers"] = {}
+
+        # Save quiz session to DB
+        new_session = QuizSession(username=name, session_id=session_id, question_data=json.dumps(ALL_QUESTIONS[:20]))
+        db.session.add(new_session)
+        db.session.commit()
+        
+        print(f"DEBUG: Created new session for {name} with ID {session_id}")
+
+        return redirect(url_for("quiz.quiz"))
+
+    return render_template("home.html")
+
+# ---------------------------------------------#
+#    LEADERBOARD #
+# ---------------------------------------------#
+
+LEADERBOARD_FILE = "quiz_leaderboard.json"
+
+@app.route("/leaderboard")
+def leaderboard():
+    try:
+        with open(LEADERBOARD_FILE, "r", encoding="utf-8") as f:
+            leaderboard = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        leaderboard = []
+
+    return render_template("leaderboard.html", leaderboard=leaderboard)
+# ----------------------- #
+#  CLEAR SESSION         #
+# ----------------------- #
+@app.route("/clear")
+def clear_session():
+    session.clear()
+    return "Session cleared! <a href='/'>Go Home</a>"
+
+#------------------------------------#
+# Register the questions blueprint
+#------------------------------------#
+app.register_blueprint(questions_bp)
+
+
+# ----------------------- #
+#  RUN APP               #
+# ----------------------- #
+if __name__ == "__main__":
+    with app.app_context():
+        db.create_all()  # Ensure tables exist
+    app.run(debug=True)

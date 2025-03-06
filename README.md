@@ -1,8 +1,19 @@
-🧮 Maths Challenge Test
+🧮 Mathematics Quiz Challenge – A Web-Based Interactive Quiz Application
 
 📌 About the Project
 
-The Maths Challenge Test is an interactive web-based quiz application designed to help students enhance their mathematical skills through a structured and engaging multiple-choice question format. The application tracks scores, maintains a leaderboard, and offers personalized test-taking experiences.
+The Mathematics Quiz Challenge is a web-based quiz application designed to test and enhance users’ mathematical problem-solving skills in a fun and engaging way. Built using Flask and PostgreSQL, this interactive quiz allows users to attempt a set of dynamically generated questions while tracking their progress and performance.
+
+Key features include:
+✅ User-Based Quiz Attempts – Users enter their names before starting, and their scores are recorded for each attempt.
+✅ Smart Question Selection – The quiz dynamically selects and modifies questions for repeat attempts, ensuring variety.
+✅ Web-Based Interface – Questions are displayed in a structured format, with support for images.
+✅ Time-Based Quiz – A timer ensures users complete the quiz within a set duration.
+✅ Leaderboard System – Scores are stored and displayed in a leaderboard for motivation and competition.
+✅ Local Database Storage – User details, quiz attempts, and scores are stored securely in PostgreSQL.
+
+
+The Mathematics Quiz Challenge is an ideal platform for students and learners to practice and refine their problem-solving skills while keeping track of their progress over time.
 
 🚀 Features
 

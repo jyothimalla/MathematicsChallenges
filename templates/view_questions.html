@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Questions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            background-color: white;
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #333;
+        }
+        .question {
+            text-align: left;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Questions for Paper ID: {{ paper_id }}</h1>
+        {% for q in questions %}
+            <div class="question">
+                <p><strong>Q{{ loop.index }}:</strong> {{ q.question }}</p>
+                <ul>
+                    <li>A: {{ q.options.A }}</li>
+                    <li>B: {{ q.options.B }}</li>
+                    <li>C: {{ q.options.C }}</li>
+                    <li>D: {{ q.options.D }}</li>
+                    <li>E: {{ q.options.E }}</li>
+                </ul>
+                <p><strong>Answer:</strong> {{ q.answer }}</p>
+                {% if q.image %}
+                    <img src="{{ q.image }}" alt="Question Image" width="200">
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

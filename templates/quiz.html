@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <title>Quiz</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -50,32 +51,30 @@
 <body>
     <div class="container">
         <h1>Question {{ question_num }} of {{ total_questions }}</h1>
-        <p>{{ question['question'] }}</p>
+      
 
-        {% if question.image %}
-            <div class="question-image">
-                <img src="{{ question.image }}" alt="Question Image">
-            </div>
-        {% endif %}
+        
 
         <form method="POST">
-            {% for key, value in question["options"].items() %}
-                <input type="radio" name="answer" value="{{ key }}"
-                       {% if key == previous_answer %} checked {% endif %} required> 
-                {{ key }}. {{ value }}<br>
+            <p> {{ question['question'] }}</p>
+            {% if question.image %}
+            <div class="question-image">
+                <img src="{{ question.image }}" alt="Question Image">
+                
+            </div>
+            {% endif %}
+            {% for option_key, option_value in question['options'].items() %}
+                <input type="radio" id="option_{{ option_key }}" name="answer"
+                       value="{{ option_key }}"
+                       {% if option_key == previous_answer %} checked {% endif %} required>  <!-- ✅ Pre-select answer -->
+                <label for="option_{{ option_key }}">{{ option_value }}</label><br>
             {% endfor %}
-            
-            <br>
-            {% if question_num > 1 %}
-                <button type="submit" name="action" value="previous">Previous</button>
-            {% endif %}
         
-            {% if question_num < total_questions %}
-                <button type="submit" name="action" value="next">Next</button>
-            {% else %}
-                <button type="submit" name="action" value="submit">Submit</button>
-            {% endif %}
+            <button type="submit" name="action" value="previous">Previous</button>
+            <button type="submit" name="action" value="next">Next</button>
+            <button type="submit" name="action" value="submit">Submit</button>
         </form>
+        
     </div>
 </body>
 </html>

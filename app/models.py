@@ -1,7 +1,7 @@
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
-db = SQLAlchemy()
+from app.database import db
 
 class Question(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -46,7 +46,19 @@ class QuizSession(db.Model):
     question_data = db.Column(db.JSON, nullable=False)
     timestamp = db.Column(db.DateTime, default=datetime.utcnow)
 
-    
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+
+class UserAnswer(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    question_id = db.Column(db.Integer, nullable=False)
+    selected_answer = db.Column(db.String(10), nullable=False)
+    correct_answer = db.Column(db.String(10), nullable=False)
+
+    user = db.relationship('User', backref=db.backref('answers', lazy=True))
+
     
 def init_db(app):
     db.init_app(app)

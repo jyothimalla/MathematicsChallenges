@@ -10,7 +10,7 @@
         },
         "answer": "A",
         "explanation": "Only the yellow triangle appears in all five circles. The other shapes appear a variety of times but none in all five circles. ",
-        "image": "/static/images/question1.png"
+        "image": "/static/images/question_paper1/question1.png"
 
     },
     {
@@ -60,10 +60,10 @@
         },
         "answer": "C",
         "explanation": "There are 7 equal pieces remaining and half the pizza is made up of 6 slices so 5 have been taken. ",
-         "image": "/static/images/question5.png"
+         "image": "/static/images/question_paper1/question5.png"
     },
     {
-        "question": "6. What should replace the question mark to make the calculation correct? 4 8 5 x2 ? +2 First Mathematics Challenge",
+        "question": "6. What should replace the question mark to make the calculation correct?",
         "options": {
             "A": "x1",
             "B": "-1",
@@ -72,7 +72,8 @@
             "E": "-5"
         },
         "answer": "E",
-        "explanation": "Working backwards from the 5 in the right hand box, to get 5 by adding on 2 we must have begun with 3 in the empty box. So to get 3 from 8 we must have subtracted 5."
+        "explanation": "Working backwards from the 5 in the right hand box, to get 5 by adding on 2 we must have begun with 3 in the empty box. So to get 3 from 8 we must have subtracted 5.",
+         "image": "/static/images/question_paper1/question6.png"
     },
     {
         "question": "7. A two-digit number is less than 50. The sum of the digits is 12 and the difference between them is 4. What is the number?",
@@ -97,10 +98,10 @@
         },
         "answer": "B",
         "explanation": "There are 6 single triangles but there is composite triangle in the middle of the diagram which means that there are 7 triangles altogether. ",
-        "image": "/static/images/question8.png"
+        "image": "/static/images/question_paper1/question8.png"
     },
     {
-        "question": "9. Farhat, Jess and Tom have 18 apples between them. Farhat has half the number of apples that Tom has. Jess has three times the number of apples that Tom has. How many apples does Tom have? First Mathematics Challenge",
+        "question": "9. Farhat, Jess and Tom have 18 apples between them. Farhat has half the number of apples that Tom has. Jess has three times the number of apples that Tom has. How many apples does Tom have?",
         "options": {
             "A": "2",
             "B": "3",
@@ -110,7 +111,7 @@
         },
         "answer": "C",
         "explanation": "This question is an example of bar modelling. Tom is the basis of the comparison so he is the standard unit, Farhat is half the standard unit and Jess is three times the standard unit. So we have four and a half units in all which represent 18 apples. Hence a unit, or Tom’s share, is four apples. ",
-        "image":"/static/images/question9.png"
+        "image":"/static/images/question_paper1/question9.png"
     },
     {
         "question": "10. DanDan Double likes to multiply whole numbers by two. He realised that his answers are:",
@@ -135,10 +136,10 @@
         },
         "answer": "C",
         "explanation": "Three 8s are 24, but there are 28 pupils in the class so 4 more pencils are needed if every pupil is to have a pencil, hence another pack must be bought making 4 packs altogether.",
-        "image":"/static/images/question11.png"
+        "image":"/static/images/question_paper1/question11.png"
     },
     {
-        "question": "12. In the calculations below, which number is hidden by the ? 3 + = 8 + = 14 First Mathematics Challenge",
+        "question": "12. In the calculations below, which number is hidden by the ?",
         "options": {
             "A": "6",
             "B": "7",
@@ -148,7 +149,7 @@
         },
         "answer": "D",
         "explanation": "From the first number statement, the number hidden by the red square is 5. So the number hidden by the blue triangle in the second number statement is 9. ",
-        "image":"/static/images/question12.png"
+        "image":"/static/images/question_paper1/question12.png"
     },
     {
         "question": "13. Tan is knitting a scarf in a week. At the end of Monday his scarf measures 68cm. He knits another 5cm every day. How long is it at the end of Friday?",
@@ -161,7 +162,7 @@
         },
         "answer": "E",
         "explanation":"There are four days from the end of Monday until Friday so Tan adds 4X5 = 20 cm to the 68 cm he had by the end of Monday giving 88 cm of knitting altogether. ",
-        "image":"/static/images/question13.png"
+        "image":"/static/images/question_paper1/question13.png"
     },
     {
         "question": "14. Maya Makealot can build this set of 3 stairs with 12 blocks. How many blocks will she need to build a set of 6 stairs?",
@@ -174,10 +175,10 @@
         },
         "answer": "A",
         "explanation": "There are 2+4+6=12 blocks already to which need to be added a stair of 8 blocks, one of 10 blocks and one of 12, i.e. 42 blocks altogether.",
-        "image":"/static/images/question14.png"
+        "image":"/static/images/question_paper1/question14.png"
     },
     {
-        "question": "15. Amanda has 10 coins in her purse. They are 2p and 5p coins. The coins make 32p in total. How many 5p coins are there in Amanda’s purse? First Mathematics Challenge",
+        "question": "15. Amanda has 10 coins in her purse. They are 2p and 5p coins. The coins make 32p in total. How many 5p coins are there in Amanda’s purse? ",
         "options": {
             "A": "3",
             "B": "4",
@@ -187,7 +188,7 @@
         },
         "answer": "B",
         "explanation": "There has to be an even number of 5p coins otherwise the amount could not be made up solely by 2p coins. This means that only B and D are possible answers. Clearly D, six 5p coins, means that only one 2p is needed to make the 32p, giving 7 coins when the question said that there were 10 originally.  ",
-        "image":"/static/images/question15.png"
+        "image":"/static/images/question_paper1/question15.png"
     },
     {
         "question": "16. Bethany’s water bottle holds 150ml when it is three quarters full. How much does it hold when it is one quarter full?",
@@ -214,7 +215,7 @@
         "explanation": "  The school clock shows 11.30 but is 5 minutes slow so the actual time is 11.35. Mr. Punctual’s watch is 8 minutes fast and so is showing 8 minutes in front of the actual time, i.e. 11.43. "
     },
     {
-        "question": "18. There are 9 cones along a fun run course. The first one marks the start of the race and the last one is at the finish line. The distance between each cone is 7 metres. How long is the fun run? First Mathematics Challenge",
+        "question": "18. There are 9 cones along a fun run course. The first one marks the start of the race and the last one is at the finish line. The distance between each cone is 7 metres. How long is the fun run?",
         "options": {
             "A": "56 metres",
             "B": " 72 metres",
@@ -224,7 +225,7 @@
         },
         "answer": "A",
         "explanation": "There 8 spaces between the 9 cones and so the total distance is 7X8 = 56 metres ",
-        "image":"/static/images/question18.png"
+        "image":"/static/images/question_paper1/question18.png"
     },
     {
         "question": "19. On the planet Numeros, the natives have a special sort of mathematics using the symbol 2/3 means add 2 and 3 and then add on the product of 2 and 3 In this example 2/3 would equal 11. What is 5/6?",
@@ -239,7 +240,7 @@
         "explanation": "5 + 6 =11. 5X6 = 30. Then 11+30 = 41 "
     },
     {
-        "question": "20. In the diagram, a square is divided into 9 equal squares. What fraction of the big square is shaded? 6 4 3 2 9",
+        "question": "20. In the diagram, a square is divided into 9 equal squares. What fraction of the big square is shaded?",
         "options": {
             "A": "1/6",
             "B": "1/4",
@@ -249,6 +250,6 @@
         },
         "answer": "B",
         "explanation": "In the small square on the left that is divided into 4 by its diagonals, the red shaded area is a quarter of that square. There are then 8 squares left and the remaining red shaded area is composed of one whole square and two half squares, i.e. of two squares, a quarter of the 8 remaining squares. Hence the whole of the red shaded area is a quarter of the 9 squares.  ",
-        "image":"/static/images/question20.png"
+        "image":"/static/images/question_paper1/question20.png"
     }
 ]
