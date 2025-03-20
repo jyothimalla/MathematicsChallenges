@@ -20,6 +20,20 @@
         h1 {
             color: #333;
         }
+        /* ✅ Background Styling */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            /*filter: blur(15px); /* ✅ Blur effect */
+            opacity: 0.6; /* ✅ Slightly visible */
+            z-index: -1;
+            transition: background-image 1s ease-in-out; /* ✅ Smooth transition effect */
+        }
         input {
             padding: 10px;
             width: 80%;
@@ -39,17 +53,33 @@
         button:hover {
             background-color: #0056b3;
         }
+        .home-image {
+            width: 400px;  /* ✅ Fixed width */
+            height: 250px; /* ✅ Fixed height */
+            object-fit: contain;  /* ✅ Resize without cropping */
+            border-radius: 10px;
+            margin-top: 15px;
+            background: white; /* ✅ Prevent transparent edges */
+            padding: 10px; /* ✅ Add padding so the image fits nicely */
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome to the Maths Challenge!</h1>
+        {% if random_image %}
+        <div class="background" style="background-image: url('{{ url_for('static', filename='images/home/' + random_image) }}');"></div>
+    {% endif %}
         <form method="POST" action="/">
             <label name="Please enter your name">Enter Your Name:</label><br>
             <input type="text" name="name" required>
             <br>
             <button type="submit">Start The Test</button>
         </form>
+         <!-- ✅ Show random image if available -->
+         {% if random_image %}
+         <img src="{{ url_for('static', filename='images/home/' + random_image) }}" alt="Math Image" class="home-image">
+     {% endif %}
     </div>
 </body>
 </html>
