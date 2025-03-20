@@ -1,17 +1,16 @@
 🧮 Mathematics Quiz Challenge – A Web-Based Interactive Quiz Application
-
 📌 About the Project
+The Mathematics Quiz Challenge is a web-based quiz application designed to test and enhance users’ mathematical problem-solving skills in an interactive and engaging way. Built using Flask and PostgreSQL, this quiz dynamically generates questions, allowing users to choose different mathematical operations and track their progress over time.
 
-The Mathematics Quiz Challenge is a web-based quiz application designed to test and enhance users’ mathematical problem-solving skills in a fun and engaging way. Built using Flask and PostgreSQL, this interactive quiz allows users to attempt a set of dynamically generated questions while tracking their progress and performance.
-
-Key features include:
+Key Features
+✅ Dynamic Question Generation – Math questions (addition, subtraction, multiplication, and division) are generated randomly.
+✅ Primary Mathematics Challenge (FMC) Mode – Users can attempt structured fixed questions sourced from a PDF-converted JSON file.
 ✅ User-Based Quiz Attempts – Users enter their names before starting, and their scores are recorded for each attempt.
-✅ Smart Question Selection – The quiz dynamically selects and modifies questions for repeat attempts, ensuring variety.
-✅ Web-Based Interface – Questions are displayed in a structured format, with support for images.
-✅ Time-Based Quiz – A timer ensures users complete the quiz within a set duration.
-✅ Leaderboard System – Scores are stored and displayed in a leaderboard for motivation and competition.
-✅ Local Database Storage – User details, quiz attempts, and scores are stored securely in PostgreSQL.
-
+✅ Smart Question Selection – The quiz ensures variety in repeated attempts by modifying existing questions.
+✅ Web-Based Interface – A fully responsive UI, with support for image-based questions.
+✅ Time-Based Quiz – Users are given a limited time to complete the quiz.
+✅ Leaderboard System – Scores are stored and displayed on a leaderboard for motivation and competition.
+✅ Local Database Storage – User details, quiz attempts, and scores are securely stored in PostgreSQL.
 
 The Mathematics Quiz Challenge is an ideal platform for students and learners to practice and refine their problem-solving skills while keeping track of their progress over time.
 
@@ -30,6 +29,28 @@ The Mathematics Quiz Challenge is an ideal platform for students and learners to
 🕰 Timed Quiz (Upcoming): Future enhancements will include time-based assessments.
 
 🖼 Image-Based Questions (Upcoming): Support for graphical problems.
+
+🆕 New Features Added recently
+
+🔹 FMC Mode (Primary Mathematics Challenge) – Users can now attempt fixed structured math challenges from a PDF-based question set converted into JSON.
+🔹 Dynamic Question Generation – Users can select operations (Addition, Subtraction, Multiplication, Division) and get randomly generated math questions.
+🔹 Improved UI for Operation Selection – A new interface allows users to choose a quiz type before starting.
+🔹 Auto-Changing Background with Blurred Effect – A dynamic background now changes every 10 seconds, providing an engaging user experience.
+🔹 Better Navigation System – Users can go back, move forward, or restart the quiz at any time.
+🔹 Retake Quiz Button – A new "Retake Quiz" button is available on the home page.
+
+🎯 Core Features
+🔹 Choose from Multiple Math Operations – Select Addition, Subtraction, Multiplication, Division, or FMC mode.
+🔹 20 Fixed FMC Questions – Predefined structured questions for primary mathematics challenge.
+🔹 Previous & Next Navigation – Users can navigate between questions while saving responses.
+🔹 Submit Button – A final submission option is available at the end of the quiz.
+🔹 Leaderboard & Score Tracking – Scores are saved after each attempt, allowing users to compare progress.
+🔹 Web-Based Interface – Fully responsive and user-friendly design.
+
+🕰 Future Enhancements
+🟢 Timed Quiz (Upcoming) – Time-based assessments for an extra challenge.
+🟢 More Image-Based Questions – Enhance graphical problem-solving.
+🟢 User Authentication – Allowing users to log in and track their quiz history.
 
 🛠️ Installation & Setup
 
@@ -65,23 +86,29 @@ Use Render for hosting both Flask and PostgreSQL databases.
 Alternatively, use Heroku or Railway.app.
 
 🖥️ Usage
+1️⃣ Start the Quiz:
+🔹 Enter your name and choose a math operation (Addition, Subtraction, Multiplication, Division, or FMC).
+🔹 Click Start to begin the test.
 
-1️⃣ Enter your name and start the quiz.
-2️⃣ Answer each question, navigating between previous and next.
-3️⃣ Submit your test to see your score and track attempts on the leaderboard.
-4️⃣ View the leaderboard to compare with previous attempts.
+2️⃣ Answer the Questions:
+🔹 Use the Previous and Next buttons to navigate.
+🔹 Select an answer and click Submit at the end.
+
+3️⃣ View Results & Leaderboard:
+🔹 After submitting, see your score and track attempts on the leaderboard.
+🔹 Click Retake Quiz to restart and try a new operation.
 
 📸 Screenshots
 
 ## 📸 Screenshots
 
 ### Home Page
-![Home Page](assets/images/image-4.png)
+![Home Page](assets/images/home.png)
 
 ### Quiz Interface
-![Quiz Interface](assets/images/image-2.png)
+![Quiz Interface](assets/images/choose_op.png)
 
-![Quiz Interface 2](assets/images/image-3.png)
+![Quiz Interface 2](assets/images/quiz.png)
 
 ### Results
 ![Results](assets/images/image-5.png)
