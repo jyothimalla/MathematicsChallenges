@@ -9,30 +9,36 @@ result_bp = Blueprint('result', __name__, url_prefix='/result')
 @result_bp.route("/", methods=["GET", "POST"])
 def result():
     if "name" not in session or "session_id" not in session:
-        return redirect(url_for("home.home"))  # ✅ Fix Redirect Issue
+        print("❌ ERROR: Session ID or Name missing! Redirecting to home.")
+        return redirect(url_for("home.home"))
 
     name = session["name"]
     session_id = session["session_id"]
 
-    print(f"DEBUG: Fetching results for {name}")
+    print(f"🔍 DEBUG: Fetching results for {name}, Session ID: {session_id}")
 
     # Retrieve session & responses
     quiz_session = QuizSession.query.filter_by(session_id=session_id).first()
     user_responses = QuizResponse.query.filter_by(session_id=session_id).all()
 
-    if not quiz_session or not user_responses:
+    if not quiz_session:
+        print(f"❌ ERROR: No quiz session found for Session ID: {session_id}")
         return "Error: No quiz session found. Please restart the quiz.", 400
 
-    user_questions = json.loads(quiz_session.question_data)
+    if not user_responses:
+        print(f"❌ ERROR: No user responses found for Session ID: {session_id}")
+        return "Error: No user responses found. Please restart the quiz.", 400
 
+    user_questions = json.loads(quiz_session.question_data)
+    total_questions=len(user_questions)
     # Calculate score
     score = sum(1 for r in user_responses if r.selected_answer == r.correct_answer)
 
-    # Fetch questions for review (✅ Prevent Out-of-Bounds Issues)
+    # Fetch questions for review
     questions = [
         {
-            "question": user_questions[r.question_id]["question"] if r.question_id < len(user_questions) else "Invalid Question",
-            "options": user_questions[r.question_id]["options"] if r.question_id < len(user_questions) else {},
+            "question": user_questions[r.question_id]["question"] if r.question_id < total_questions else "Invalid Question",
+            "options": user_questions[r.question_id]["options"] if r.question_id < total_questions else {},
             "answer": r.correct_answer,
             "selected_answer": r.selected_answer,
             "explanation": user_questions[r.question_id].get("explanation", "") if r.question_id < len(user_questions) else "",
@@ -41,4 +47,6 @@ def result():
         for r in user_responses
     ]
 
-    return render_template("result.html", name=name, score=score, questions=questions)
+    print(f"🏆 DEBUG: User Score -> {score}")
+
+    return render_template("result.html", name=name, score=score, questions=questions, total_questions=total_questions)

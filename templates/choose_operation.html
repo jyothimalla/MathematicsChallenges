@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Choose Math Operation</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            padding: 20px; 
+            background-color: #f4f4f4; 
+        }
+        .container { 
+            width: 60%; 
+            margin: auto; 
+            padding: 20px; 
+            background: white; 
+            border-radius: 10px; 
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #333;
+        }
+        .btn-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .operation-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            height: 150px;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            color: white;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: transform 0.2s ease-in-out;
+        }
+        .operation-btn:hover {
+            transform: scale(1.1);
+        }
+        .multiplication { background-color: #FF5733; }  /* Red */
+        .addition { background-color: #28A745; }  /* Green */
+        .subtraction { background-color: #a638ea; }  /* Purple */
+        .division { background-color: #ed6d1d; }  /* Orange */
+        .fmc { background-color: #e3d343; } /* Yellow */
+        .math-image {
+            width: 60px;
+            height: 60px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello, {{ name }}! Choose a Math Operation</h1>
+        
+        <form method="POST" id="operation-form" class="btn-container">
+            <input type="hidden" name="operation" id="operation-input">
+            
+            <button type="button" onclick="setOperation('multiplication')" class="operation-btn multiplication">
+                Multiplication
+                <img src="{{ url_for('static', filename='images/multiplication.png') }}" alt="Multiplication" class="math-image">
+            </button>
+
+            <button type="button" onclick="setOperation('addition')" class="operation-btn addition">
+                Addition
+                <img src="{{ url_for('static', filename='images/addition.png') }}" alt="Addition" class="math-image">
+            </button>
+
+            <button type="button" onclick="setOperation('subtraction')" class="operation-btn subtraction">
+                Subtraction
+                <img src="{{ url_for('static', filename='images/subtraction.png') }}" alt="Subtraction" class="math-image">
+            </button>
+
+            <button type="button" onclick="setOperation('division')" class="operation-btn division">
+                Division
+                <img src="{{ url_for('static', filename='images/division.png') }}" alt="Division" class="math-image">
+            </button>
+
+            <button type="button" onclick="setOperation('fmc')" class="operation-btn fmc">
+                Primary Maths Challenge
+                <img src="{{ url_for('static', filename='images/fmc.png') }}" alt="Primary Maths Challenge" class="math-image">
+            </button>
+        </form>
+    </div>
+
+    <script>
+        function setOperation(operation) {
+            fetch("{{ url_for('quiz.clear_operation') }}", { method: "POST" }) // ✅ Clear old operation
+                .then(() => {
+                    document.getElementById("operation-input").value = operation;
+                    document.getElementById("operation-form").submit(); // ✅ Submit form after clearing session
+                });
+        }
+    </script>
+</body>
+</html>

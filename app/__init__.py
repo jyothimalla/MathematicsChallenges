@@ -15,7 +15,7 @@ def create_app():
     app.secret_key = "super_secure_random_key"
 
     # Database Configuration
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:password@localhost/maths_challenge'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://quiz_admin:password@localhost/maths_challenge'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['UPLOAD_FOLDER'] = "uploads"
 

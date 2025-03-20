@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <title>Quiz</title>
-
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -51,30 +50,42 @@
 <body>
     <div class="container">
         <h1>Question {{ question_num }} of {{ total_questions }}</h1>
-      
-
-        
 
         <form method="POST">
             <p> {{ question['question'] }}</p>
+            
+            <!-- ✅ Show Image if Available -->
             {% if question.image %}
             <div class="question-image">
                 <img src="{{ question.image }}" alt="Question Image">
-                
             </div>
             {% endif %}
+
+            <!-- ✅ Display All 5 Answer Options -->
             {% for option_key, option_value in question['options'].items() %}
                 <input type="radio" id="option_{{ option_key }}" name="answer"
                        value="{{ option_key }}"
-                       {% if option_key == previous_answer %} checked {% endif %} required>  <!-- ✅ Pre-select answer -->
+                       {% if option_key == previous_answer %} checked {% endif %} required>
                 <label for="option_{{ option_key }}">{{ option_value }}</label><br>
             {% endfor %}
-        
+
             <button type="submit" name="action" value="previous">Previous</button>
             <button type="submit" name="action" value="next">Next</button>
             <button type="submit" name="action" value="submit">Submit</button>
         </form>
-        
+
+             <!-- ✅ Add Restart Quiz Button -->
+<form action="{{ url_for('quiz.choose_operation') }}" method="GET">
+    <button type="submit">Restart Quiz</button>
+</form>
+        <!-- ✅ Show Explanation Only After Submission -->
+        {% if question.explanation and request.form.get("action") == "submit" %}
+        <div class="explanation">
+            <h3>Explanation:</h3>
+            <p>{{ question.explanation }}</p>
+        </div>
+        {% endif %}
+
     </div>
 </body>
 </html>
