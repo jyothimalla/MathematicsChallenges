@@ -10,10 +10,13 @@ from app.models import db, QuizSession, QuizResponse
 from app import create_app  # Import from app/__init__.py
 from app.home import home_bp  # Import the home blueprint
 from app.database import db
+from flask_session import Session
 
 # Create Flask app using factory function
 app = create_app()
 
+app.config['SESSION_TYPE'] = 'filesystem'
+Session(app)
 # ----------------------- #
 #  CLEAR SESSION         #
 # ----------------------- #
