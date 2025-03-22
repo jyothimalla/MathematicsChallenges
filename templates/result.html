@@ -49,7 +49,7 @@
     <div class="container">
         <h1>Congratulations, {{ name }}!</h1>
         <p class="score">You scored {{ score }} out of {{total_questions}}!</p>
-        <a href="{{ url_for('quiz.choose_operation') }}" class="btn">Re Take the Quiz Again</a>
+        <a href="{{ url_for('quiz.spinner') }}" class="btn">Re Take the Quiz Again</a>
         <a href="{{ url_for('leaderboard.leaderboard') }}" class="btn">View Leaderboard</a>
        <a href="{{ url_for('review.review') }}" class="btn">Review your Quiz</a>
 

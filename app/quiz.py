@@ -41,17 +41,22 @@ def generate_math_questions(num_questions=20, operation="multiplication"):
         if operation == "multiplication":
             correct_answer = num1 * num2
             question_text = f"What is {num1} × {num2}?"
+            explanation = f"{num1} × {num2} = {correct_answer}"
+
         elif operation == "addition":
             correct_answer = num1 + num2
             question_text = f"What is {num1} + {num2}?"
+            explanation = f"{num1} + {num2} = {correct_answer}"
         elif operation == "subtraction":
             num1, num2 = max(num1, num2), min(num1, num2)  # Ensure positive result
             correct_answer = num1 - num2
             question_text = f"What is {num1} - {num2}?"
+            explanation = f"{num1} - {num2} = {correct_answer}"
         elif operation == "division":
             num1 = num1 * num2  # Ensure clean division (no remainders)
             correct_answer = num1 // num2
             question_text = f"What is {num1} ÷ {num2}?"
+            explanation = f"{num1} ÷ {num2} = {correct_answer}"
         
         else:
             raise ValueError("Invalid operation. Choose from: multiplication, addition, subtraction, division.")
@@ -77,11 +82,28 @@ def generate_math_questions(num_questions=20, operation="multiplication"):
         question = {
             "question": question_text,
             "options": options,
-            "answer": correct_key  # Store the correct answer key (A, B, C, or D)
+            "answer": correct_key,  # Store the correct answer key (A, B, C, or D)
+            "explanation": explanation
         }
         questions.append(question)
 
     return questions
+
+
+@quiz_bp.route("/spinner")
+def spinner():
+    if "name" not in session:
+        return redirect(url_for("home.home"))  # safety check
+
+    return render_template("spinner.html", name=session["name"])
+
+@quiz_bp.route("/spin_submit", methods=["POST"])
+def spin_submit():
+    selected_operation = request.form.get("operation")
+    session["selected_operation"] = selected_operation
+    print(f"🎯 Spinner selected operation: {selected_operation}")
+    return redirect(url_for("quiz.start_quiz"))
+
 
 # ------------------------- #
 #         Routes            #
@@ -93,7 +115,7 @@ def choose_operation():
         return redirect(url_for("home.home"))
 
     if request.method == "POST":
-        selected_operation = request.form.get("operation")
+        selected_operation = request.form.get("operationInput")
         session["selected_operation"] = selected_operation
         print(f"✅ DEBUG: Operation selected and stored -> {selected_operation}")
         return redirect(url_for("quiz.start_quiz"))
@@ -118,7 +140,7 @@ def start_quiz():
     if operation == "fmc":
         questions = load_fmc_questions()
     else:
-        questions = generate_math_questions(10, operation)
+        questions = generate_math_questions(20, operation)
 
     print(f"✅ DEBUG: Questions Prepared for {operation} -> {len(questions)}")
 
@@ -144,9 +166,6 @@ def start_quiz():
     print(f"📦 QuizSession saved to DB for {operation}")
 
     return redirect(url_for("quiz.quiz"))
-
-
-
 
 
 @quiz_bp.route("/quiz", methods=["GET", "POST"])
@@ -202,9 +221,24 @@ def quiz():
         question=current_question,
         question_num=session["current_q"] + 1,
         total_questions=len(questions),
-        previous_answer=previous_answer
+        previous_answer=previous_answer,
+        name=session["name"]
     )
 
+## for printing question paper ##
+
+@quiz_bp.route("/print_questions")
+def print_questions():
+    session_id = session.get("session_id")
+    if not session_id:
+        return redirect(url_for("home.home"))
+
+    quiz_session = QuizSession.query.filter_by(session_id=session_id).first()
+    if not quiz_session:
+        return "No active quiz session found", 400
+
+    questions = json.loads(quiz_session.question_data)
+    return render_template("print_questions.html", questions=questions, name=session.get("name", ""))
 
 '''
 def handle_post_request(request, session, quiz_session):
@@ -240,7 +274,6 @@ def clear_operation():
     print("🔄 DEBUG: Clearing selected operation from session...")
     session.pop("selected_operation", None)  # ✅ Removes old operation
     return "", 204  # No content response
-
 
 #@quiz_bp.route("/", methods=["GET"])
 #def redirect_to_quiz():

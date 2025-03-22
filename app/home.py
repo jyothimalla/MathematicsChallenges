@@ -44,7 +44,7 @@ def home():
         db.session.add(new_session)
         db.session.commit()
 
-        return redirect(url_for("quiz.choose_operation"))
+        return redirect(url_for("quiz.spinner"))
 
     return render_template("home.html", random_image=random_image)
 

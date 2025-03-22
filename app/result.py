@@ -31,8 +31,13 @@ def result():
 
     user_questions = json.loads(quiz_session.question_data)
     total_questions=len(user_questions)
-    # Calculate score
-    score = sum(1 for r in user_responses if r.selected_answer == r.correct_answer)
+    # Use a dictionary to track latest response per question
+    response_map = {}
+    for r in user_responses:
+        response_map[r.question_id] = r
+
+    # Then calculate score only once per question
+    score = sum(1 for r in response_map.values() if r.selected_answer == r.correct_answer)
 
     # Fetch questions for review
     questions = [

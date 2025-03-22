@@ -1,8 +1,16 @@
+# Import and Register Blueprints
+
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 import os
 from app.database import db
+from app.home import home_bp
+from app.quiz import quiz_bp
+from app.result import result_bp
+from app.review import review_bp
+from app.questions import questions_bp
+from app.leaderboard import leaderboard_bp
 
 # Initialize the database globally
 #db = SQLAlchemy()
@@ -26,13 +34,7 @@ def create_app():
     db.init_app(app)
     Migrate(app, db)
 
-    # Import and Register Blueprints
-    from app.home import home_bp
-    from app.quiz import quiz_bp
-    from app.result import result_bp
-    from app.review import review_bp
-    from app.questions import questions_bp
-    from app.leaderboard import leaderboard_bp
+    
     # ✅ Prevent duplicate blueprint registration
     if "home" not in app.blueprints:
         app.register_blueprint(home_bp, url_prefix='/')

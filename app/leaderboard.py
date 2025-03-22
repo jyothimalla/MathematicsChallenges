@@ -8,17 +8,21 @@ from app.database import db
 from uuid import uuid4  # Unique session IDs
 import os
 import json
+from sqlalchemy import func, desc
 
-# Create Blueprint
 leaderboard_bp = Blueprint('leaderboard', __name__, url_prefix='/leaderboard')
 
-@leaderboard_bp.route("/", methods=["GET", "POST"])
-
+@leaderboard_bp.route("/", methods=["GET"])
 def leaderboard():
-    try:
-        with open("quiz_leaderboard.json", "r", encoding="utf-8") as f:
-            leaderboard = json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError):
-        leaderboard = []
+    results = db.session.query(
+        QuizResponse.student_name.label("name"),
+        func.count().filter(QuizResponse.selected_answer == QuizResponse.correct_answer).label("score"),
+        func.max(QuizResponse.timestamp).label("date")
+    ).group_by(QuizResponse.student_name).order_by(desc("score")).all()
+
+    leaderboard = [
+        {"name": r.name, "score": r.score, "date": r.date.strftime("%Y-%m-%d")}
+        for r in results
+    ]
 
     return render_template("leaderboard.html", leaderboard=leaderboard)

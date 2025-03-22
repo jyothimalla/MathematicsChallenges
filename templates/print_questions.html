@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Printable Questions</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      padding: 40px;
+      color: #333;
+    }
+    h2 {
+      text-align: center;
+    }
+    .question-block {
+      margin-bottom: 30px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+    }
+    .question-title {
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .option {
+      margin-left: 20px;
+      font-size: 16px;
+    }
+    img {
+      max-width: 300px;
+      display: block;
+      margin: 10px auto;
+    }
+    @media print {
+      .no-print {
+      display: none !important;           
+  }
+}
+
+  </style>
+</head>
+<body>
+    <div style="display: flex; justify-content: flex-end; margin-bottom: 20px;">
+        <a href="{{ url_for('quiz.print_questions') }}" target="_blank">
+            <button style="
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;" 
+            onclick="window.print()">
+              🖨️ Print Questions
+          </button>
+        </a>
+      </div>
+      
+  <h2>{{ name }}'s Question Paper</h2>
+
+  {% for q in questions %}
+    <div class="question-block">
+      <div class="question-title">{{ loop.index }}. {{ q.question }}</div>
+      <input type="radio" name="answer" value="{{ key }}" {% if key == previous_answer %} checked {% endif %}>
+
+      {% if q.image %}
+        <img src="{{ q.image }}" alt="Question Image">
+      {% endif %}
+      {% for key, value in q.options.items() %}
+        <div class="option">{{ key }}. {{ value }}</div>
+      {% endfor %}
+    </div>
+  {% endfor %}
+
+</body>
+</html>

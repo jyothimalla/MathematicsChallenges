@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spin the Wheel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f4f4f4;
+      padding: 40px;
+    }
+
+    .wheel-container {
+      position: relative;
+      margin: 0 auto;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 10px solid #6a0dad;
+      overflow: hidden;
+    }
+
+    .wheel {
+      width: 100%;
+      height: 100%;
+      transform: rotate(0deg);
+      transition: transform 4s cubic-bezier(0.33, 1, 0.68, 1);
+      position: relative;
+    }
+
+    .slice {
+      width: 50%;
+      height: 50%;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform-origin: 0% 100%;
+      clip-path: polygon(50% 100%, 100% 100%, 50%);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .slice:nth-child(1) { background: #ff5733; transform: rotate(0deg); }
+    .slice:nth-child(2) { background: #28a745; transform: rotate(72deg); }
+    .slice:nth-child(3) { background: #007bff; transform: rotate(144deg); }
+    .slice:nth-child(4) { background: #ffc107; transform: rotate(216deg); }
+    .slice:nth-child(5) { background: #6f42c1; transform: rotate(288deg); }
+
+    .pointer {
+      width: 0; height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-top: 25px solid red;
+      margin: 20px auto;
+    }
+
+    button {
+      margin-top: 30px;
+      background-color: #6a0dad;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #4b078f;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome {{ name }}</h1>
+  <h2>🎡 Spin to Select Your Math Operation</h2>
+
+  <div class="pointer"></div>
+
+  <div class="wheel-container">
+    <div class="wheel" id="wheel">
+      <div class="slice">FMC</div>             <!-- 0° -->
+      <div class="slice">Division</div>        <!-- 72° -->
+      <div class="slice">Multiplication</div>  <!-- 144° -->
+      <div class="slice">Subtraction</div>     <!-- 216° -->
+      <div class="slice">Addition</div>        <!-- 288° -->
+
+    </div>
+  </div>
+
+  <form id="spinnerForm" method="POST" action="{{ url_for('quiz.spin_submit') }}">
+    <input type="hidden" name="operation" id="operationInput">
+    <button type="button" onclick="spinWheel()">🎯 Spin</button>
+  </form>
+
+  <script>
+    const wheel = document.getElementById('wheel');
+    const operationInput = document.getElementById('operationInput');
+    const options = ['addition', 'subtraction', 'multiplication', 'division', 'fmc'];
+
+    function spinWheel() {
+      const rand = Math.floor(Math.random() * 5);
+      const angle = 360 * 5 + (72 * rand) + 36; // 5 full spins + land on slice center
+      wheel.style.transform = `rotate(${angle}deg)`;
+
+      setTimeout(() => {
+        const selected = options[rand];
+        operationInput.value = selected;
+        console.log('Selected:', selected);
+        document.getElementById('spinnerForm').submit();
+      }, 4200);
+    }
+  </script>
+
+</body>
+</html>
